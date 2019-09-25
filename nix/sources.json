@@ -1,0 +1,14 @@
+{
+    "terraform-hercules-ci": {
+        "branch": "master",
+        "description": "Terraform modules for Hercules CI",
+        "homepage": null,
+        "owner": "hercules-ci",
+        "repo": "terraform-hercules-ci",
+        "rev": "cb146c8d77090032a8dcdc679e5bc9ef97b7ac27",
+        "sha256": "1mjags3xg2wll5vhjh12ykfw5yj27nyvsfy6ypvd6z472i393vj3",
+        "type": "tarball",
+        "url": "https://github.com/hercules-ci/terraform-hercules-ci/archive/cb146c8d77090032a8dcdc679e5bc9ef97b7ac27.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    }
+}

@@ -7,3 +7,9 @@
 
 # .tfvars files
 *.tfvars
+
+# Secrets
+*.key
+*.secret
+cluster-join-token.key
+binary-caches.json
