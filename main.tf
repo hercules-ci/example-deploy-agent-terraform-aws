@@ -1,7 +1,4 @@
-# To store the deployment state on S3 and use dynamodb for locking:
-# - deploy with ./deploy
-# - uncomment section below and update the bucket name
-# - run nix-shell --run 'terraform init'
+# Deploy, uncomment, update bucket field, nix-shell --run 'terraform init'
 #
 # terraform {
 #   backend "s3" {

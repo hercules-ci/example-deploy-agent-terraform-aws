@@ -11,13 +11,18 @@ You are encouraged to copy and adapt this module to your conventions and require
 1. Get a cluster join token from the [dashboard](https://hercules-ci.com/dashboard)
 2. Create a binary caches file and save it as `binary-caches.json.key` by following roughly [this subsection](https://docs.hercules-ci.com/hercules-ci/getting-started/deploy/manual/#_3_configure_binary_caches)
 3. Configure [AWS credentials for Terraform](https://www.terraform.io/docs/providers/aws/index.html)
-4. Create the S3 bucket for the terraform state as hinted in `main.tf` comments
-5. On a bastion host, run
+4. On a bastion host, run
 ```
 $ ssh-add ~/.ssh/id_rsa
 $ ./deploy
 ```
-7. Securely backup the secrets
+and note the `terraform_bucket` output.
+5. Uncomment the terraform backend section in `main.tf` and update the bucket name.
+6. Run
+```
+nix-shell --run 'terraform init'
+```
+7. Securely backup the secrets.
 
 ### Update
 
