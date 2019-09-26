@@ -1,0 +1,25 @@
+#!/usr/bin/env nix-shell
+#!nix-shell -i bash
+set -eu -o pipefail
+cd "$(dirname "${BASH_SOURCE[0]}")"
+
+cat_die() {
+  cat 1>&2
+  exit 1
+}
+
+test -d .terraform || terraform init
+
+echo 1>&2 'deploy: Checking whether ssh key is loaded...'
+if ssh-add -L | grep "$HOME/.ssh/id_rsa" >/dev/null
+then echo 1>&2 'deploy: ssh key is loaded'
+else cat_die <<EOF
+deploy: Please run the following command to make the ssh key available:
+
+    ssh-add ~/.ssh/id_rsa
+
+(or adapt the deploy script to fit your security requirements)
+EOF
+fi
+
+terraform apply

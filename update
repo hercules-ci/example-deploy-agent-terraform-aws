@@ -1,0 +1,10 @@
+#!/usr/bin/env nix-shell
+#!nix-shell -i bash
+
+set -eu -o pipefail
+cd "$(dirname "${BASH_SOURCE[0]}")"
+source $source_terraform_hercules_ci/nix/update-lib.sh
+
+update-niv
+update-tf-refs '["terraform-hercules-ci"]' '$(find . -name \*.tf)'
+update-summarize
