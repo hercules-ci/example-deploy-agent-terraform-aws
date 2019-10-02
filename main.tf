@@ -17,7 +17,7 @@ provider "aws" {
 }
 
 module "agent-1" {
-  source = "git::https://github.com/hercules-ci/terraform-hercules-ci.git//hercules_ci_agent_aws?ref=cb146c8d77090032a8dcdc679e5bc9ef97b7ac27"
+  source = "git::https://github.com/hercules-ci/terraform-hercules-ci.git//hercules_ci_agent_aws?ref=046779cf55028e3f0e1541cb422de04e6ecb94a1"
   use_prebuilt = true
   cluster_join_token = "${file("${path.module}/cluster-join-token.key")}"
   binary_caches_json = "${file("${path.module}/binary-caches.json")}"
