@@ -5,10 +5,10 @@
         "homepage": null,
         "owner": "hercules-ci",
         "repo": "terraform-hercules-ci",
-        "rev": "15991cb764700d18bc0ccff52a1a521574c6a677",
-        "sha256": "0bw3b5rclyz91c6gr2k34y5y7czz949056b03ir090wlc03ggw0k",
+        "rev": "56518fa67ba25d30a1d9f5f40e07a35cd67e87d0",
+        "sha256": "0s084drm65z9in5bj3mmxc4dsxavzvb28wcjm8x0h2n74li9c6hr",
         "type": "tarball",
-        "url": "https://github.com/hercules-ci/terraform-hercules-ci/archive/15991cb764700d18bc0ccff52a1a521574c6a677.tar.gz",
+        "url": "https://github.com/hercules-ci/terraform-hercules-ci/archive/56518fa67ba25d30a1d9f5f40e07a35cd67e87d0.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }
