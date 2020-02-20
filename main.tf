@@ -17,7 +17,7 @@ provider "aws" {
 }
 
 module "agent-1" {
-  source = "git::https://github.com/hercules-ci/terraform-hercules-ci.git//hercules_ci_agent_aws?ref=56518fa67ba25d30a1d9f5f40e07a35cd67e87d0"
+  source = "git::https://github.com/hercules-ci/terraform-hercules-ci.git//hercules_ci_agent_aws?ref=f83636dc3d3caf974ab70a865a98db56346d26c8"
   use_prebuilt = true
   cluster_join_token = "${file("${path.module}/cluster-join-token.key")}"
   binary_caches_json = "${file("${path.module}/binary-caches.json")}"
@@ -27,7 +27,7 @@ module "agent-1" {
   public_key = "${file("~/.ssh/id_rsa.pub")}"
 
   configs = [
-    "${path.module}/extra-configuration.nix",
+    abspath("${path.module}/extra-configuration.nix"),
   ]
 }
 
@@ -45,7 +45,7 @@ resource "aws_s3_bucket" "terraform_state" {
     enabled = true
   }
 
-  tags {
+  tags = {
     Name = "Terraform State"
   }
 }
