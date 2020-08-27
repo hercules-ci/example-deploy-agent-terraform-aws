@@ -1,14 +1,26 @@
 {
+    "nixpkgs": {
+        "branch": "nixos-20.03",
+        "description": "A read-only mirror of NixOS/nixpkgs tracking the released channels. Send issues and PRs to",
+        "homepage": "https://github.com/NixOS/nixpkgs",
+        "owner": "NixOS",
+        "repo": "nixpkgs-channels",
+        "rev": "feff2fa6659799fe7439038b3eba453d62a16e69",
+        "sha256": "0vlnrwlxl6xf6b8rmiy7as2lhi015nklyj2xdiy3ly8xznq69ll9",
+        "type": "tarball",
+        "url": "https://github.com/NixOS/nixpkgs-channels/archive/feff2fa6659799fe7439038b3eba453d62a16e69.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "terraform-hercules-ci": {
         "branch": "master",
         "description": "Terraform modules for Hercules CI",
         "homepage": null,
         "owner": "hercules-ci",
         "repo": "terraform-hercules-ci",
-        "rev": "6880d40e1a2745096d80d9c5b1c659c0f6b9768c",
-        "sha256": "14q1f7f9kih6hvykybncxzwqkdhmlmxf57n19hscyrxxvmfzzm99",
+        "rev": "c3c7e2155b7e872cab52460faa86a2fb0cd60375",
+        "sha256": "0929fpdc9ppr4wfzdry3n0cispxqkdjbrw5fz8m0gbni435hj0md",
         "type": "tarball",
-        "url": "https://github.com/hercules-ci/terraform-hercules-ci/archive/6880d40e1a2745096d80d9c5b1c659c0f6b9768c.tar.gz",
+        "url": "https://github.com/hercules-ci/terraform-hercules-ci/archive/c3c7e2155b7e872cab52460faa86a2fb0cd60375.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }
